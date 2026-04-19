@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0f0d;
+  color: #c8d8d0;
+  font-family: "Courier New", Courier, monospace;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.header { margin-bottom: 2rem; }
+.header-subtitle {
+  font-size: 0.7rem;
+  letter-spacing: 0.2rem;
+  color: #3fffa2;
+  margin-bottom: 0.4rem;
+}
+.header-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #e0efe8;
+}
+.header-title .highlight { color: #3fffa2; }
+.header-line {
+  height: 2px;
+  background: linear-gradient(to right, #3fffa2, transparent);
+  margin-top: 0.8rem;
+}
+
+.form-container {
+  background: #0e1a14;
+  border: 1px solid #1e3028;
+  border-radius: 4px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+.form-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.15rem;
+  color: #3fffa2;
+}
+.form-row { display: flex; gap: 0.8rem; }
+.form-input {
+  background: #0a0f0d;
+  border: 1px solid #1e3028;
+  border-radius: 3px;
+  color: #c8d8d0;
+  padding: 0.6rem 0.9rem;
+  font-family: "Courier New", monospace;
+  font-size: 0.85rem;
+  flex: 1;
+  outline: none;
+}
+.form-input:focus { border-color: #3fffa2; }
+.score-input { max-width: 160px; }
+.add-btn {
+  background: transparent;
+  border: 1px solid #3fffa2;
+  color: #3fffa2;
+  padding: 0.6rem 1.2rem;
+  font-family: "Courier New", monospace;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.add-btn:hover { background: #3fffa2; color: #0a0f0d; }
+.error-msg { color: #ff5f5f; font-size: 0.75rem; margin-top: 0.5rem; }
+
+.stats-bar { display: flex; gap: 1rem; margin-bottom: 1.2rem; }
+.stat-card {
+  background: #0e1a14;
+  border: 1px solid #1e3028;
+  border-radius: 4px;
+  padding: 0.8rem 1.4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.stat-label { font-size: 0.6rem; letter-spacing: 0.15rem; color: #5a8a70; }
+.stat-value { font-size: 2rem; font-weight: 700; color: #e0efe8; }
+.stat-value.passed { color: #3fffa2; }
+.stat-value.avg { color: #ffe87a; }
+
+.table-container {
+  background: #0e1a14;
+  border: 1px solid #1e3028;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.table-header-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 1.2rem;
+  border-bottom: 1px solid #1e3028;
+}
+.student-table { width: 100%; border-collapse: collapse; }
+.student-table thead th {
+  font-size: 0.65rem;
+  letter-spacing: 0.15rem;
+  color: #5a8a70;
+  padding: 0.7rem 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid #1e3028;
+}
+.student-row { border-left: 2px solid #1e3028; }
+.student-row:hover { background: #112018; border-left-color: #3fffa2; }
+.student-row td {
+  padding: 0.75rem 1.2rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #0e1a14;
+}
+.td-name { color: #e0efe8; font-weight: 600; }
+.score-pass { color: #ffe87a; font-weight: 700; }
+.score-fail { color: #ff5f5f; font-weight: 700; }
+
+.status-badge {
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 3px;
+  font-weight: 700;
+}
+.status-badge.pass { background: #0a2e1a; color: #3fffa2; border: 1px solid #1e5e38; }
+.status-badge.fail { background: #2e0a0a; color: #ff5f5f; border: 1px solid #5e1e1e; }
+
+.td-update { display: flex; gap: 0.5rem; align-items: center; }
+.update-input {
+  background: #0a0f0d;
+  border: 1px solid #1e3028;
+  border-radius: 3px;
+  color: #c8d8d0;
+  padding: 0.35rem 0.6rem;
+  width: 70px;
+  font-family: "Courier New", monospace;
+  font-size: 0.85rem;
+  outline: none;
+}
+.update-input:focus { border-color: #3fffa2; }
+.save-btn {
+  background: transparent;
+  border: 1px solid #1e3028;
+  color: #5a8a70;
+  padding: 0.35rem 0.7rem;
+  font-family: "Courier New", monospace;
+  font-size: 0.7rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.save-btn:hover { border-color: #3fffa2; color: #3fffa2; }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6rem;
+  letter-spacing: 0.2rem;
+  color: #2a4a38;
+}
